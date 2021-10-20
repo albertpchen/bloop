@@ -15,6 +15,8 @@ import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
 
+import org.scalasbt.ipcsocket.UnixDomainSocket
+
 import scala.concurrent.Promise
 
 import bloop.bloopgun.BloopgunCli
@@ -25,7 +27,6 @@ import bloop.launcher.core.Feedback
 import bloop.launcher.printError
 import bloop.launcher.printQuoted
 import bloop.launcher.println
-import bloop.sockets.UnixDomainSocket
 
 final class BspBridge(
     clientIn: InputStream,
