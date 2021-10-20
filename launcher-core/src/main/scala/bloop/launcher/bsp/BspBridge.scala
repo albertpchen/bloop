@@ -157,7 +157,7 @@ final class BspBridge(
         connection match {
           case BspConnection.Tcp(host, port) => new Socket(host, port)
           case BspConnection.UnixLocal(socketPath) =>
-            new UnixDomainSocket(socketPath.toAbsolutePath.toString)
+            new UnixDomainSocket(socketPath.toAbsolutePath.toString, true)
         }
       }
     }
